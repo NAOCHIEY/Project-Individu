@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontak Web Profile</title>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Times New Roman, sans-serif;
+    background: linear-gradient(to right, #f8c8dc, #d2a679, #fff5e1);
+    color: #4a2c2a;
+    text-align: center;
+    padding: 30px;
+}
+
+nav{
+    margin-bottom: 25px;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    background-color: #8b5e3c;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    background-color: #ff9eb5;
+}
+
+h1{
+    background-color: #ffb6c1;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+p{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+form{
+    background-color: rgba(255,255,255,0.8);
+    max-width: 450px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: left;
+}
+
+label{
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #d2a679;
+    border-radius: 10px;
+    outline: none;
+}
+
+input[type="radio"]{
+    margin-top: 10px;
+}
+
+button{
+    width: 100%;
+    padding: 12px;
+    background-color: #8b5e3c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: #ff9eb5;
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+</nav>
+
+<h1>Hubungi Saya</h1>
+<p>Silakan isi formulir ini untuk menghubungi saya</p>
+
+<form action="proses.php" method="post">
+    <label>Nama Lengkap</label><br>
+    <input type="text" name="nama" required><br><br>
+
+    <label>Email</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Jenis Kelamin</label><br>
+    <input type="radio" name="jk" value="L"> Laki-Laki
+    <input type="radio" name="jk" value="P"> Perempuan
+    <br><br>
+
+    <label>Pesan Anda</label><br>
+    <textarea name="pesan" rows="5"></textarea><br><br>
+
+    <button type="submit">Kirim Data</button>
+</form>
+
+</body>
+</html>
